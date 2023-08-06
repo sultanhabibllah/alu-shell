@@ -1,3 +1,2 @@
 #!/bin/bash
-
 for file in $(find . -maxdepth 1 -type f -name "*.html"); do if [ -e "../$file" ]; then src_mtime=$(stat -c %Y "$file"); dest_mtime=$(stat -c %Y "../$file"); if [ $src_mtime -gt $dest_mtime ]; then cp "$file" "../$file"; fi; else cp "$file" "../$file"; fi; done
