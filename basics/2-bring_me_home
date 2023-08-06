@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd "$(grep '^$HOME' /etc/passwd | cut -d: -f6)"
+
