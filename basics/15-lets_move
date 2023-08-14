@@ -1,9 +1,2 @@
 #!/bin/bash
-
-mkdir -p /tmp/u  # Create the directory if it doesn't exist
-
-for file in [A-Z]*; do
-    if [ -f "$file" ]; then
-        mv "$file" /tmp/u/
-    fi
-done
+mv [[:upper:]]* /tmp/u
